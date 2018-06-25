@@ -11,3 +11,7 @@ def listen_func(message):
 @listen_to('hello')
 def reply2hello(message):
     message.reply('hello')
+
+@listen_to('大迫')
+def reply2Osako(message):
+	message.reply('半端ないって')
