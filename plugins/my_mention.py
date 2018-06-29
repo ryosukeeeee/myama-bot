@@ -99,3 +99,11 @@ def weather(message):
 @respond_to('名言')
 def reply2phrase(message):
 	message.send('空間こそがメディア')
+	message.send(random.choice([
+		'空間こそがメディア', 
+		'余裕が停滞を生む', 
+		'終わりが見えると作業がだるい',
+		'罰を与えなければいけない',
+		'蓄えてるわけでしょ？爆発力がすごいね多分',
+		'できてたね〜']))
+
