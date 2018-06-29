@@ -56,7 +56,7 @@ def weather(message):
 	else:
 	    telop_icon = ':fire:'
 	text = title + '\n' + '今日の天気　' + telop + telop_icon
-	message.send(text)
+    message.send(text)
     description = jsonfile['description']['text']
     message.send(description)
 
@@ -92,6 +92,6 @@ def weather(message):
 	else:
 	    telop_icon = ':fire:'
 	text = title + '\n' + '今日の天気　' + telop + telop_icon
-	message.send(text)
+    message.send(text)
     description = jsonfile['description']['text']
     message.send(description)
