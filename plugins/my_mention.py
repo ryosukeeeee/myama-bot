@@ -13,7 +13,7 @@ import random
 @listen_to('松のや')
 @listen_to('とんかつ')
 @listen_to('トンカツ')
-def listen_func(message):
+def reply2matsunoya(message):
 	message.reply('松のやは神')
 
 @default_reply
