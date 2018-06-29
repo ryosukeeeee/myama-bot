@@ -5,6 +5,7 @@ from slackbot.bot import listen_to
 from slackbot.bot import default_reply
 import urllib
 import json
+import random
 
 @listen_to('まつのや')
 @listen_to('松の家')
@@ -15,9 +16,9 @@ import json
 def listen_func(message):
     message.reply('松のやは神')
 
-@listen_to('hello')
+@default_reply
 def reply2hello(message):
-    message.reply('hello')
+    message.reply(random.choice([':myama1', ':myama2:', ':tonkatsu:']))
 
 @listen_to('大迫')
 def reply2Osako(message):
