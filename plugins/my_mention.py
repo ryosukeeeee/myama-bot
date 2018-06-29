@@ -57,6 +57,8 @@ def weather(message):
 	    telop_icon = ':fire:'
 	text = title + '\n' + '今日の天気　' + telop + telop_icon
 	message.send(text)
+    description = jsonfile['description']['text']
+    message.send(description)
 
 @respond_to('あしたの天気')
 @respond_to('あしたのてんき')
@@ -91,3 +93,5 @@ def weather(message):
 	    telop_icon = ':fire:'
 	text = title + '\n' + '今日の天気　' + telop + telop_icon
 	message.send(text)
+    description = jsonfile['description']['text']
+    message.send(description)
