@@ -14,11 +14,11 @@ import random
 @listen_to('とんかつ')
 @listen_to('トンカツ')
 def listen_func(message):
-    message.reply('松のやは神')
+	message.reply('松のやは神')
 
 @default_reply
 def reply2hello(message):
-    message.reply(random.choice([':myama1', ':myama2:', ':tonkatsu:']))
+	message.reply(random.choice([':myama1:', ':myama2:', ':tonkatsu:']))
 
 @listen_to('大迫')
 def reply2Osako(message):
@@ -58,7 +58,7 @@ def weather(message):
 	text = title + '\n' + '今日の天気　' + telop + telop_icon
 	message.send(text)
 	description = jsonfile['description']['text']
-	message.send('[解説]'+'\n'+description)
+	message.send('\n\n【解説】'+'\n'+description)
 
 @respond_to('あしたの天気')
 @respond_to('あしたのてんき')
@@ -94,4 +94,4 @@ def weather(message):
 	text = title + '\n' + '今日の天気　' + telop + telop_icon
 	message.send(text)
 	description = jsonfile['description']['text']
-	message.send('[解説]'+'\n'+description)
+	message.send('\n\n【解説】'+'\n'+description)
