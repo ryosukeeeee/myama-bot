@@ -96,9 +96,9 @@ def weather(message):
 	description = jsonfile['description']['text']
 	message.send('\n\n【解説】'+'\n'+description)
 
+@respond_to('めいげん')
 @respond_to('名言')
 def reply2phrase(message):
-	message.send('空間こそがメディア')
 	message.send(random.choice([
 		'空間こそがメディア', 
 		'余裕が停滞を生む', 
