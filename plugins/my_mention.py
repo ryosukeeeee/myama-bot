@@ -68,7 +68,7 @@ def weather(message):
 	html = urllib.request.urlopen(url + city_id)
 	jsonfile = json.loads(html.read().decode('utf-8'))
 	title = jsonfile['title']
-	telop = jsonfile['forecasts'][0]['telop']
+	telop = jsonfile['forecasts'][1]['telop']
 	#telopが晴れだったら晴れのスラックのアイコンとか場合分け
 	telop_icon = ''
 	if telop.find('雪') > -1:
