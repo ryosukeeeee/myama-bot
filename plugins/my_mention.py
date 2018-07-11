@@ -27,10 +27,15 @@ def reply2birthday(message):
 	today = datetime.date.today()
 	if today < datetime.date(today.year, 9,18):
 	    birthday = datetime.date(today.year, 9, 18)
+    	deltaDays = birthday - today
+		message.send("誕生日まであと{0}日".format(deltaDays.days))
+	elif today == datetime.date(today.year, 9, 18):
+		message.send("今日が誕生日")
 	else:
-	    birthday = datetime.date(today.year + 1, 9, 18)    
-	deltaDays = birthday - today
-	message.send("誕生日まであと{0}日".format(deltaDays.days))
+	    birthday = datetime.date(today.year + 1, 9, 18)   
+    	deltaDays = birthday - today
+		message.send("誕生日まであと{0}日".format(deltaDays.days)) 
+
 
 
 @respond_to('きょうのてんき')
