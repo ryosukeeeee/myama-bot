@@ -25,7 +25,9 @@ def reply2matsunoya(message):
 @respond_to('誕生日')
 def reply2birthday(message):
 	today = datetime.date.today()
-	message.send(today.strftime("%Y/%m/%d"))
+	birthday = datetime.date(2018, 9, 18)
+	deltaDays = birthday - today
+	message.send("誕生日まであと{0}日".format(deltaDays))
 
 
 @respond_to('きょうのてんき')
