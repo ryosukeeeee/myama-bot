@@ -6,6 +6,12 @@ from slackbot.bot import default_reply
 import urllib
 import json
 import random
+import datetime
+
+
+@default_reply
+def reply2hello(message):
+	message.reply(random.choice([':myama1:', ':myama2:', ':tonkatsu:']))
 
 @listen_to('まつのや')
 @listen_to('松の家')
@@ -16,13 +22,10 @@ import random
 def reply2matsunoya(message):
 	message.reply('松のやは神')
 
-@default_reply
-def reply2hello(message):
-	message.reply(random.choice([':myama1:', ':myama2:', ':tonkatsu:']))
+@respond_to('誕生日')
+def reply2birthday(message):
+	message.send('datetime.date.today()')
 
-@listen_to('大迫')
-def reply2Osako(message):
-	message.reply('半端ないって')
 
 @respond_to('きょうのてんき')
 @respond_to('きょうの天気')
