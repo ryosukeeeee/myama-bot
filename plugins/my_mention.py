@@ -32,7 +32,7 @@ def reply2birthday(message):
 	elif today == datetime.date(today.year, 9, 18):
 		message.send("今日が誕生日")
 	else:
-		birthday = datetime.date(today.year + 1, 9, 18)   
+		birthday = datetime.date(today.year + 1, 9, 18)
 		deltaDays = birthday - today
 		message.send("誕生日まであと{0}日".format(deltaDays.days))
 
@@ -114,10 +114,13 @@ def weather(message):
 @respond_to('名言')
 def reply2phrase(message):
 	message.send(random.choice([
-		'空間こそがメディア', 
-		'余裕が停滞を生む', 
+		'空間こそがメディア',
+		'余裕が停滞を生む',
 		'終わりが見えると作業がだるい',
 		'罰を与えなければいけない',
 		'蓄えてるわけでしょ？爆発力がすごいね多分',
-		'できてたね〜']))
-
+		'できてたね〜'
+		'いっぱい酒飲むと死んだ脳細胞が生き返るって聞いたことある',
+		'固くなってうまい',
+		'おれたちも訴えかけるべき。蝉のように。',
+		'臆病者は、勝つと分かっている戦いしかできない。']))
