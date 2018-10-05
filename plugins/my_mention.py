@@ -35,7 +35,8 @@ def reply2birthday(message):
 		birthday = datetime.date(today.year, 9, 18)
 		deltaDays = birthday - today
 		if (deltaDays.days < 0):
-			deltaDays.days = deltaDays.days + 365
+			d = timedelta(days = 365)
+			deltaDays = deltaDays + timedelta
 		message.send("誕生日まであと{0}日".format(deltaDays.days))
 
 @respond_to('きょうのてんき')
