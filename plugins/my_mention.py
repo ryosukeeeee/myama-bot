@@ -7,7 +7,7 @@ import urllib
 import json
 import random
 import datetime
-from datetime import timedelta
+# from datetime import timedelta
 
 #$ git add {変更したファイルパス名}
 #$ git commit -m "{コミット名}"
@@ -36,8 +36,8 @@ def reply2birthday(message):
 		birthday = datetime.date(today.year, 9, 18)
 		deltaDays = birthday - today
 		if (deltaDays.days < 0):
-			d = timedelta(days = 365)
-			deltaDays = deltaDays + timedelta
+			message.send("誕生日まであと{0}日".format(deltaDays.days + 365))
+			return
 		message.send("誕生日まであと{0}日".format(deltaDays.days))
 
 @respond_to('きょうのてんき')
