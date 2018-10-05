@@ -29,19 +29,15 @@ def reply2matsunoya(message):
 @respond_to('誕生日')
 def reply2birthday(message):
 	today = datetime.date.today()
-	if today.day < datetime.date(today.year, 9,18).day:
-		birthday = datetime.date(today.year, 9, 18)
-		deltaDays = birthday - today
-		message.send("誕生日まであと{0}日".format(deltaDays.days))
-	elif today.day == datetime.date(today.year, 9, 18).day:
+	if today.day == datetime.date(today.year, 9, 18).day:
 		message.send("今日が誕生日")
 	else:
-		birthday = datetime.date(today.year + 1, 9, 18)
+		birthday = datetime.date(today.year, 9, 18)
 		deltaDays = birthday - today
+		if (deltaDays < 0):
+			deltaDays = deltaDays + 365
 		message.send("誕生日まであと{0}日".format(deltaDays.days))
-
-
-
+		
 @respond_to('きょうのてんき')
 @respond_to('きょうの天気')
 @respond_to('今日の天気')
