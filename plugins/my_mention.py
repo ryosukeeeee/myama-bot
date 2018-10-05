@@ -7,6 +7,7 @@ import urllib
 import json
 import random
 import datetime
+from datetime import timedelta
 
 #$ git add {変更したファイルパス名}
 #$ git commit -m "{コミット名}"
